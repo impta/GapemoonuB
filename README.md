@@ -17,10 +17,9 @@ An Telegram Bot By [@ImErmA](https://t.me/gpmooooon) To Stream Videos in Telegra
 ## Main Features
 
 - Supports Live Streaming.
-- Supports YouTube Streaming.
 - Supports Live Radio Streaming.
 - Supports Video Files Streaming.
-- Supports YouTube Live Streaming.
+Streaming.
 - User Account Protection (PM Guard)
 
 ## Deploy Own Bot

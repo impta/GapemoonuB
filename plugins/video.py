@@ -98,34 +98,16 @@ async def stream(client, m: Message):
     chat_id = m.chat.id
     media = m.reply_to_message
     if not media and not ' ' in m.text:
-        await msg.edit("❗ __Send Me An Live Stream Link / YouTube Video Link / Reply To An Video To Start Video Streaming!__")
+        await msg.edit("❗ __Send Me An Live Stream Link /  / Reply To An Video To Start Video Streaming!__")
 
     elif ' ' in m.text:
         text = m.text.split(' ', 1)
         query = text[1]
         if not 'http' in query:
-            return await msg.edit("❗ __Send Me An Live Stream Link / YouTube Video Link / Reply To An Video To Start Video Streaming!__")
-        regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
+            return await msg.edit("❗ __Send Me An Live Stream Link /  / Reply To An Video To Start Video Streaming!__")
+        regex = 
         match = re.match(regex, query)
         if match:
-            await msg.edit("🔄 `Starting YouTube Video Stream ...`")
-            try:
-                meta = ydl.extract_info(query, download=False)
-                formats = meta.get('formats', [meta])
-                for f in formats:
-                    ytstreamlink = f['url']
-                link = ytstreamlink
-                search = VideosSearch(query, limit=1)
-                opp = search.result()["result"]
-                oppp = opp[0]
-                thumbid = oppp["thumbnails"][0]["url"]
-                split = thumbid.split("?")
-                thumb = split[0].strip()
-            except Exception as e:
-                return await msg.edit(f"❌ **YouTube Download Error !** \n\n`{e}`")
-                print(e)
-
-        else:
             await msg.edit("🔄 `Starting Live Video Stream ...`")
             link = query
             thumb = "https://telegra.ph/file/3e14128ad5c9ec47801bd.jpg"
@@ -228,7 +210,7 @@ async def stream(client, m: Message):
 
     else:
         await msg.edit(
-            "💁🏻‍♂️ Do you want to search for a YouTube video?",
+            ,
             reply_markup=InlineKeyboardMarkup(
             [
                 [

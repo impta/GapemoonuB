@@ -67,7 +67,7 @@ async def search(client, query):
                         v["viewCount"]["short"]
                     ),
                     input_message_content=InputTextMessageContent(
-                        "/stream https://www.youtube.com/watch?v={}".format(
+.format(
                             v["id"]
                         )
                     ),
