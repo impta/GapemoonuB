@@ -30,12 +30,10 @@ async def play(client, m: Message):
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
         match = re.match(regex, query)
         if match:
-            await msg.edit("🔄 `Starting YouTube Audio Stream ...`")
-            
-
-        else:
             await msg.edit("🔄 `Starting Live Audio Stream ...`")
             link = query
+            
+            
 
         vid_call = VIDEO_CALL.get(chat_id)
         if vid_call:
