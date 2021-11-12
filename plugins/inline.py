@@ -21,7 +21,7 @@ from config import REPLY_MESSAGE
 from pyrogram import Client, errors
 from pyrogram.handlers import InlineQueryHandler
 from pyrogram.types import InlineQueryResultArticle, InputTextMessageContent, InlineKeyboardButton, InlineKeyboardMarkup
-from youtubesearchpython import VideosSearch
+
 
 
 buttons = [
